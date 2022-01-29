@@ -39,5 +39,6 @@ pip install -r requirements.txt
 
 ### Demo
 
+![](swd_auth_sucess.gif)
 
 
