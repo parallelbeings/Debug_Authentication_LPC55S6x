@@ -46,4 +46,14 @@ pip install -r requirements.txt
 
 ![](swd_auth_sucess.gif)
 
+### Technical Details:
+
+LPC55S69 MCU provides users to enable/diable debug accesses for field return using an authentication mechanism. The Authentication  uses ARM debug specification to implement challenge/response protocol and signing of debug tokens using asymmetric key cryptography. In a nutshell, the debug authentication mechanism works as below,
+
+1. Developer enables Debug authentication in the MCU and deploys the device in field.  
+2. In field return, when a the developer wants to debug the MCU, the target MCU sends a random challenge along with device specific constraints to the debugger. 
+3. The debugger prepares a response token signed along with a certficate chain and the challenge value. 
+4. The MCU verifies the signature's in the certificate chain against a root of trust fuse and all the debug permisions set in the certificate. 
+5. If the verification is success, the MCU opens the MEM-AP port access to the debugger in order to debug the device till the next cold reset.  
+
 
