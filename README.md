@@ -40,6 +40,7 @@ pip install -r requirements.txt
                      -  Bus   -  ----------------->  GND    -  MCU  -
                      ----------  ----------------->  VCC    ---------                            
                  
+![](LPC_Hydrabus_connection.jpg)
 
 ### Demo:
 
