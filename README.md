@@ -17,6 +17,7 @@ The reason for using a Hydrabus is to understand in deep how the low level SWD p
 3. [Programming FTDI devices in Python: Part 4](https://iosoft.blog/2018/12/08/ftdi-python-part-4/)
 
 ## Requirements:
+
 ### Hardware requirements:
 
 1. [LPC55S69-EVK Development board](https://www.nxp.com/design/development-boards/lpcxpresso-boards/lpcxpresso55s69-development-board:LPC55S69-EVK)
@@ -24,7 +25,10 @@ The reason for using a Hydrabus is to understand in deep how the low level SWD p
 
 ### Software requirements:
 
-Ubuntu 20.04.3 LTS
+1. Ubuntu 20.04.3 LTS
+2. Enable Debug Authentication in the LPC55S69 using the [Application note](https://www.nxp.com/docs/en/application-note/AN13037.pdf) 
+3. Install the requirements text for POC.
+
 ``` 
 pip install -r requirements.txt 
 ```
@@ -37,7 +41,7 @@ pip install -r requirements.txt
                      ----------  ----------------->  VCC    ---------                            
                  
 
-### Demo
+### Demo:
 
 ![](swd_auth_sucess.gif)
 
