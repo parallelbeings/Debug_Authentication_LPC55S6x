@@ -28,11 +28,14 @@ The reason for using a Hydrabus is to understand in deep how the low level SWD p
 1. Ubuntu 20.04.3 LTS
 2. Enable Debug Authentication in the LPC55S69 using the [Application note](https://www.nxp.com/docs/en/application-note/AN13037.pdf) 
 3. Install the requirements text for POC.
-
 ``` 
 pip install -r requirements.txt 
 ```
-
+4. After enabling the Debug authentication in the MCU, copy the "dck_rsa_2048.dc" and "dck_rsa_2048.pem" into the folder where the tool is running. 
+5. Run the tool. 
+``` 
+python3 swd_lpc55_debug_auth.py
+```
 ### Hardware Connection :
 
                      ----------  <-----------------> SWD    ---------
@@ -48,7 +51,7 @@ pip install -r requirements.txt
 
 ### Technical Details:
 
-LPC55S69 MCU provides users to enable/diable debug accesses for field return using an authentication mechanism. The Authentication  uses ARM debug specification to implement challenge/response protocol and signing of debug tokens using asymmetric key cryptography. In a nutshell, the debug authentication mechanism works as below,
+LPC55S69 MCU provides users to enable/disable debug accesses for field return using an authentication mechanism. The Authentication  uses ARM debug specification to implement challenge/response protocol and signing of debug tokens using asymmetric key cryptography. In a nutshell, the debug authentication mechanism works as below,
 
 1. Developer enables Debug authentication in the MCU and deploys the device in field.  
 2. In field return, when a the developer wants to debug the MCU, the target MCU sends a random challenge along with device specific constraints to the debugger. 
