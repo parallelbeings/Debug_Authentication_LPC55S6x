@@ -1,0 +1,6 @@
+cffi==1.15.0
+cryptography==36.0.1
+hexdump==3.3
+pycparser==2.21
+pyHydrabus==0.2.6
+pyserial==3.5
